@@ -29,9 +29,10 @@ public interface AlumnoDAO {
     public void actualizarAlumno(Alumno alumno);
 
     //@Query("UPDATE alumno SET nombre=:n, primerAp=:pa WHERE numControl=:nc")
-    @Query("UPDATE alumno SET nombre=:n WHERE numControl=:nc")
-    public void actualizarAlumnoPorNumControl(String n, String nc);
-
+    @Query("UPDATE Alumno SET nombre = :n, apellido1 = :a1, apellido2 = :a2 WHERE numControl = :nc")
+    public void actualizarAlumnoPorNumControl(String n, String a1, String a2, String nc);
+    @Query("SELECT * FROM Alumno WHERE numControl = :nc LIMIT 1")
+    Alumno obtenerAlumnoPorNumControl(String nc);
     //-------------- CONSULTAS ----------------
     @Query("SELECT * FROM alumno")
     public List<Alumno> mostrarTodos();

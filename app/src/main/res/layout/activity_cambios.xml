@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/caja_numcontrol"
+        android:layout_width="310dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="solo numeros"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="329dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:text="Ingrese el NC del Alumno a Editar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/cajanombre"
+        android:layout_width="266dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="solo letras"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caja_numcontrol" />
+
+    <EditText
+        android:id="@+id/cajaap1"
+        android:layout_width="281dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="solo letras"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/cajanombre" />
+
+    <EditText
+        android:id="@+id/cajaap2"
+        android:layout_width="271dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="solo letras"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cajaap1" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="74dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="40dp"
+        android:text="Nombre"
+        app:layout_constraintEnd_toStartOf="@+id/cajanombre"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caja_numcontrol" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:text="Apellido 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="44dp"
+        android:text="Apellido 2"
+        app:layout_constraintEnd_toStartOf="@+id/cajaap2"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/btn_guardar_cambios"
+        android:layout_width="235dp"
+        android:layout_height="73dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="16dp"
+        android:text="GUARDAR CAMBIOS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_busqueda"
+        android:layout_width="228dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="144dp"
+        android:text="Traer datos"
+        android:onClick="buscarAlumno"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
