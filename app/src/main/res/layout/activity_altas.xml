@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="189dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="41dp"
+        android:text="@string/txt_titulo_altas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_num_control"
+        android:layout_width="100dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="10dp"
+        android:text="NC:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/caja_num_control"
+        android:layout_width="233dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="23dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="79dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="24dp"
+        android:text="Nombre:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_num_control" />
+
+    <EditText
+        android:id="@+id/caja_nombre"
+        android:layout_width="243dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="23dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caja_num_control" />
+
+    <Button
+        android:id="@+id/btn_guardar"
+        android:layout_width="188dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="120dp"
+        android:text="GUARDAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caja_nombre" />
+
+    <Button
+        android:id="@+id/RESTABLECER"
+        android:layout_width="202dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="37dp"
+        android:text="btn_limpiar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_guardar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
