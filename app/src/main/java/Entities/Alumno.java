@@ -1,9 +1,13 @@
-package entities;
+package Entities;
 
 import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 @Entity
 public class Alumno {
+
     @PrimaryKey
     @NonNull
     public String numControl;
@@ -33,5 +37,13 @@ public class Alumno {
 
     public void setNombre(@NonNull String nombre) {
         this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Alumno{" +
+                "numControl='" + numControl + '\'' +
+                ", nombre='" + nombre + '\'' +
+                '}';
     }
 }

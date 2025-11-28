@@ -18,7 +18,7 @@ public abstract class EscuelaBD extends RoomDatabase {
 
     public static EscuelaBD getAppDatabase(Context context){
         if (INSTANCE == null)
-            (INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
+            INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                     EscuelaBD.class, "BD_Escuela").build();
 
         return INSTANCE;
