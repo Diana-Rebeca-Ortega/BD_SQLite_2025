@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Entities.Alumno;
@@ -16,8 +17,9 @@ import Entities.Alumno;
 public class AlumnoAdapter extends RecyclerView.Adapter<AlumnoAdapter.AlumnoViewHolder> {
 
     private List<Alumno> alumnos;
-
+    private List<Alumno> listaAlumnosOriginal;
     public AlumnoAdapter(List<Alumno> alumnos) {
+        this.listaAlumnosOriginal = new ArrayList<>(alumnos);
         this.alumnos = alumnos;
     }
 
@@ -43,6 +45,22 @@ public class AlumnoAdapter extends RecyclerView.Adapter<AlumnoAdapter.AlumnoView
     public int getItemCount() {
         return alumnos.size();
     }
+    public void filtrar(String texto) {
+        alumnos.clear();
+        if (texto.isEmpty()) {
+            alumnos.addAll(listaAlumnosOriginal);
+        } else {
+            texto = texto.toLowerCase();
+            for (Alumno alumno : listaAlumnosOriginal) {
+                // Filtra por el Nombre (puedes añadir apellido1 o numControl si quieres)
+                if (alumno.nombre.toLowerCase().startsWith(texto)) {
+                    alumnos.add(alumno);
+                }
+            }
+        }
+        notifyDataSetChanged(); // Notifica al RecyclerView que los datos han cambiado
+    }
+
 
     // El ViewHolder contiene referencias a las vistas de cada fila
     public static class AlumnoViewHolder extends RecyclerView.ViewHolder {
