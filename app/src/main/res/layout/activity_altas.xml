@@ -5,77 +5,123 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="189dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="119dp"
-        android:layout_marginTop="41dp"
-        android:text="@string/txt_titulo_altas"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/btn_num_control"
-        android:layout_width="100dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="10dp"
-        android:text="NC:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/caja_num_control"
-        android:layout_width="233dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="23dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="79dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="24dp"
-        android:text="Nombre:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_num_control" />
-
     <EditText
         android:id="@+id/caja_nombre"
-        android:layout_width="243dp"
-        android:layout_height="78dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="23dp"
+        android:layout_width="212dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
         android:ems="10"
+        android:hint="Solo letras"
         android:inputType="text"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/caja_num_control" />
 
-    <Button
-        android:id="@+id/btn_guardar"
-        android:layout_width="188dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="120dp"
-        android:text="GUARDAR"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="56dp"
+        android:text="Nombre: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/caja_num_control"
+        android:layout_width="209dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Solo numeros"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="40dp"
+        android:text="Num. Control: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="154dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="143dp"
+        android:text="@string/txt_titulo_altas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_restablecer"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="348dp"
+        android:text="Restableer"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/caja_nombre" />
 
     <Button
-        android:id="@+id/RESTABLECER"
-        android:layout_width="202dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="37dp"
-        android:text="btn_limpiar"
+        android:id="@+id/btn_guardar"
+        android:layout_width="125dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="80dp"
+        android:onClick="agregarAlumno"
+        android:text="Guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/caja_ap1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="44dp"
+        android:text="Apellido1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_guardar" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/caja_ap2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="48dp"
+        android:text="Apellido2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caja_ap1" />
+
+    <EditText
+        android:id="@+id/cajaAP1"
+        android:layout_width="232dp"
+        android:layout_height="71dp"
+        android:ems="10"
+        android:hint="solo letras"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/caja_ap1"
+        app:layout_constraintTop_toBottomOf="@+id/caja_nombre" />
+
+    <EditText
+        android:id="@+id/cajaAP2"
+        android:layout_width="228dp"
+        android:layout_height="64dp"
+        android:ems="10"
+        android:hint="solo letras"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/caja_ap2"
+        app:layout_constraintTop_toBottomOf="@+id/cajaAP1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -25,17 +26,16 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
     public void abrirActivities(View v){
-        Toast.makeText(this, "Magia magia", Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "Magia magia", Toast.LENGTH_LONG).show();
         Intent i = null;
-        if(v.getId()==R.id.btn_altas)
+        if( v.getId() == R.id.btn_altas)
             i = new Intent(this, ActivityAltas.class);
-        else if (v.getId()==R.id.btn_altas) {
-
-
-        }
+        else if( v.getId() == R.id.btn_consutlas)
+            i = new Intent(this, ActivityConsultas.class);
         startActivity(i);
 
+
     }
+
 }

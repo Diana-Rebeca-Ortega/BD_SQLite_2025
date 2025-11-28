@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">BD_SQLite_2025</string>
-    <string name="altas">ALTAS</string>
-    <string name="bajas">BAJAS</string>
-    <string name="cambios">CAMBIOS</string>
-    <string name="consultas">CONSULTAS</string>
+    <string name="txt_btn_altas"> AGREGAR </string>
+    <string name="txt_btn_bajas"> ELIMINAR </string>
+    <string name="txt_btn_cambios"> MODIFICAR </string>
+    <string name="txt_btn_consultas"> BUSCAR </string>
     <string name="txt_titulo_altas">AGREGAR ALUMNOS</string>
 </resources>

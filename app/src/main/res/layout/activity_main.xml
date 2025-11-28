@@ -8,44 +8,55 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn_altas"
-        android:layout_width="135dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="143dp"
-        android:layout_marginTop="154dp"
+        android:id="@+id/btn_consutlas"
+        android:layout_width="157dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="128dp"
         android:onClick="abrirActivities"
-        android:text="@string/altas"
+        android:text="@string/txt_btn_consultas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cambios" />
+
+    <Button
+        android:id="@+id/btn_altas"
+        android:layout_width="169dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="154dp"
+        android:onClick="abrirActivities"
+        android:text="Altas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_bajas"
-        android:layout_width="118dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="154dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/bajas"
+        android:layout_width="160dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="157dp"
+        android:onClick="abrirActivities"
+        android:text="BAJAS"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_altas" />
 
     <Button
         android:id="@+id/btn_cambios"
-        android:layout_width="158dp"
-        android:layout_height="76dp"
-        android:layout_marginStart="154dp"
-        android:layout_marginTop="11dp"
-        android:text="@string/cambios"
+        android:layout_width="155dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="128dp"
+        android:onClick="abrirActivities"
+        android:text="CAMBIOS"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_bajas" />
-
-    <Button
-        android:id="@+id/btn_consultas"
-        android:layout_width="186dp"
-        android:layout_height="109dp"
-        android:layout_marginStart="143dp"
-        android:layout_marginTop="17dp"
-        android:text="@string/consultas"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_cambios" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
