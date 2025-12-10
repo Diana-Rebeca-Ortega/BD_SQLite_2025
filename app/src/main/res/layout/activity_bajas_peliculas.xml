@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BAJA DE PELÍCULAS POR ID"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingrese el ID de la película que desea eliminar (solo números):"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/et_id_pelicula_eliminar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID de Película"
+        android:inputType="number"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/btn_ejecutar_baja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ELIMINAR PELÍCULA"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:backgroundTint="#D32F2F"/>
+</LinearLayout>

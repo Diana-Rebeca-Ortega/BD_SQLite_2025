@@ -4,60 +4,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/content_background"
     android:padding="20dp">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CATÁLOGO DE PELÍCULAS"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="15dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="end"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:weightSum="3">  <Button
+        android:id="@+id/btn_consultas_edicion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="CONSULTAS Y EDICIÓN"
+        android:layout_marginEnd="5dp" />
 
         <Button
-            android:id="@+id/btn_buscar_categoria"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_bajas_peliculas"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="CONSULTAS Y EDICIÓN" />
+            android:layout_weight="1"
+            android:text="BAJAS"
+            android:backgroundTint="#D32F2F"
+            android:layout_marginEnd="5dp" />
 
         <Button
             android:id="@+id/btn_añadir_pelicula"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="AÑADIR"
-            android:layout_marginStart="10dp"
             android:backgroundTint="#FBC02D" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#DCDCDC"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:orientation="horizontal"
-        android:weightSum="7"> <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="ID" android:textStyle="bold" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:text="Título" android:textStyle="bold" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Cat." android:textStyle="bold" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Alq." android:textStyle="bold" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Venta" android:textStyle="bold" />
-        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Stock" android:textStyle="bold" />
     </LinearLayout>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_peliculas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical" />
-
 </LinearLayout>

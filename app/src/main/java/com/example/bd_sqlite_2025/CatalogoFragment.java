@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.bd_sqlite_2025.ABCC_Peliculas.ActivityBajasPeliculas;
 import com.example.bd_sqlite_2025.ABCC_Peliculas.ActivityConsultasPeliculas;
 import com.example.bd_sqlite_2025.ABCC_Peliculas.PeliculaClickListener;
 import com.example.bd_sqlite_2025.ABCC_Peliculas.RegistrarPeliculaDialog;
@@ -48,15 +49,21 @@ public class CatalogoFragment extends Fragment implements PeliculaClickListener 
             RegistrarPeliculaDialog dialog = new RegistrarPeliculaDialog();
             dialog.show(getParentFragmentManager(), "RegistrarPelicula");
         });
-        Button btnConsultas = view.findViewById(R.id.btn_buscar_categoria);
+        Button btnConsultas = view.findViewById(R.id.btn_consultas_edicion); // Asumo que usas btn_consultas_edicion
         btnConsultas.setOnClickListener(v -> {
             Intent intent = new Intent(requireContext(), ActivityConsultasPeliculas.class);
             startActivity(intent);
         });
+
+        //  BAJAS
+        Button btnBajas = view.findViewById(R.id.btn_bajas_peliculas);
+        btnBajas.setOnClickListener(v -> {
+            // Lanzar la ActivityBajasPeliculas.class
+            Intent intent = new Intent(requireContext(), ActivityBajasPeliculas.class); // ¡Ajustar nombre!
+            startActivity(intent);
+        });
         return view;
     }
-
-    // --- NUEVO MÉTODO CLAVE: Configuración del RecyclerView ---
     private void configurarRecyclerView(View view) {
         // 1. Obtener referencia del RecyclerView (ID: recycler_view_peliculas)
         recyclerView = view.findViewById(R.id.recycler_view_peliculas);

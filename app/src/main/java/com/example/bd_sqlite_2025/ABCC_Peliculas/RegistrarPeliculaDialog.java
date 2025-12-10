@@ -10,14 +10,11 @@ import com.example.bd_sqlite_2025.R;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import db.videosBDD; // Usando el nombre de clase correcto
+import db.videosBDD;
 import Entities.Pelicula;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
-// ELIMINAR imports: androidx.lifecycle.Observer, androidx.recyclerview.widget.RecyclerView, Adapters.PeliculaAdapter
 
 public class RegistrarPeliculaDialog extends DialogFragment {
 
@@ -25,10 +22,6 @@ public class RegistrarPeliculaDialog extends DialogFragment {
     private EditText etTitulo, etDirector, etAlquiler, etPrecioVenta, etStockTotal;
     private Spinner spinnerCategoria;
     private Button btnGuardar, btnCancelar;
-
-    // ELIMINADAS: private RecyclerView recyclerView;
-    // ELIMINADAS: private PeliculaAdapter adapter;
-    // ELIMINADAS: private videosBDD db;
 
     public RegistrarPeliculaDialog() {
         // Constructor vacío requerido
@@ -41,8 +34,6 @@ public class RegistrarPeliculaDialog extends DialogFragment {
         if (getDialog() != null) {
             getDialog().setTitle("REGISTRAR NUEVA PELICULA");
         }
-
-        // ELIMINADA: db = VideosDatabase.getAppDatabase(getApplicationContext());
 
         etTitulo = view.findViewById(R.id.et_titulo);
         etDirector = view.findViewById(R.id.et_director);
@@ -65,9 +56,7 @@ public class RegistrarPeliculaDialog extends DialogFragment {
         return view;
     }
 
-    // ... (Método validarCampos() correcto) ...
-
-    private void registrarPelicula() {
+     private void registrarPelicula() {
         // 1. Obtener valores de los campos
         String titulo = etTitulo.getText().toString();
         String director = etDirector.getText().toString();
@@ -75,11 +64,6 @@ public class RegistrarPeliculaDialog extends DialogFragment {
         String sAlquiler = etAlquiler.getText().toString();
         String sPrecioVenta = etPrecioVenta.getText().toString();
         String sStockTotal = etStockTotal.getText().toString();
-
-        if (titulo.isEmpty() || sAlquiler.isEmpty() || sStockTotal.isEmpty()) {
-            Toast.makeText(getContext(), "Por favor, completa los campos obligatorios.", Toast.LENGTH_SHORT).show();
-            return;
-        }
 
         try {
             double alquiler = Double.parseDouble(sAlquiler);
@@ -181,4 +165,5 @@ public class RegistrarPeliculaDialog extends DialogFragment {
 
         return esValido;
     }
+
 }

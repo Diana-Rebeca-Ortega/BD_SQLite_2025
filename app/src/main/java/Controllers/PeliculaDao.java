@@ -20,4 +20,6 @@ public interface PeliculaDao {
     Pelicula getPeliculaById(int id);
     @Update
     void update(Pelicula pelicula);
+    @Query("DELETE FROM pelicula WHERE id_pelicula = :id_pelicula")
+    int deleteById(int id_pelicula);
 }

@@ -179,9 +179,61 @@ public class ModificarPeliculaDialog extends DialogFragment {
         }
     }
 
-    // Debes reutilizar o copiar tu método validarCampos() aquí
     private boolean validarCampos() {
-        // ... (Tu lógica de validación aquí) ...
-        return true;
+        boolean esValido = true;
+
+        // --- 1. Validar campos de texto vacíos ---
+        if (etTitulo.getText().toString().trim().isEmpty()) {
+            etTitulo.setError("El título es obligatorio");
+            esValido = false;
+        } else {
+            etTitulo.setError(null); // Limpiar error si está bien
+        }
+
+        if (etDirector.getText().toString().trim().isEmpty()) {
+            etDirector.setError("El director es obligatorio");
+            esValido = false;
+        } else {
+            etDirector.setError(null);
+        }
+
+        // --- 2. Validar el Spinner (Categoría) ---
+        if (spinnerCategoria.getSelectedItemPosition() == 0) { // Asume que la posición 0 es "Seleccione una opción"
+            Toast.makeText(getContext(), "Debe seleccionar una Categoría", Toast.LENGTH_SHORT).show();
+            esValido = false;
+        }
+
+        // --- 3. Validar campos numéricos vacíos ---
+        if (etAlquiler.getText().toString().trim().isEmpty()) {
+            etAlquiler.setError("Alquiler es obligatorio");
+            esValido = false;
+        }
+        if (etPrecioVenta.getText().toString().trim().isEmpty()) {
+            etPrecioVenta.setError("Precio de venta es obligatorio");
+            esValido = false;
+        }
+        if (etStockTotal.getText().toString().trim().isEmpty()) {
+            etStockTotal.setError("Stock es obligatorio");
+            esValido = false;
+        }
+
+        // --- 4. Validar formato numérico (si no están vacíos) ---
+        try {
+            if (!etAlquiler.getText().toString().trim().isEmpty()) {
+                Double.parseDouble(etAlquiler.getText().toString());
+                etAlquiler.setError(null);
+            }
+            if (!etPrecioVenta.getText().toString().trim().isEmpty()) {
+                Double.parseDouble(etPrecioVenta.getText().toString());
+                etPrecioVenta.setError(null);
+            }
+            if (!etStockTotal.getText().toString().trim().isEmpty()) {
+                Integer.parseInt(etStockTotal.getText().toString());
+                etStockTotal.setError(null);
+            }
+        } catch (NumberFormatException e) {
+        }
+
+        return esValido;
     }
 }
