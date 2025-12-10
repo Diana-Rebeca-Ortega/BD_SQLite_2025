@@ -37,11 +37,13 @@ public class MainActivity extends AppCompatActivity {
         else if( v.getId() == R.id.btn_cambios){
             i = new Intent(this, ActivityCambios.class);
             startActivity(i);}
-        else if( v.getId() == R.id.btn_bajas)
+        else if( v.getId() == R.id.btn_bajas) {
             i = new Intent(this, ActivityBajas.class);
-        startActivity(i);
-        
-
+            startActivity(i);
+        }else if( v.getId() == R.id.btn_ingresar) {
+            i = new Intent(this, ActivityMenuPrincipal.class);
+            startActivity(i);
+        }
 
     }
 

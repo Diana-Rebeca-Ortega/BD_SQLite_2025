@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".VentanaPrincipalActivity"> <LinearLayout
+    android:layout_width="280dp"  android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/menu_background"> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_disney_logo" /> <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Disney Club"
+    android:textColor="@android:color/white"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:layout_marginTop="5dp" />
+</LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_empleados"
+                style="@style/MenuButtonStyle"
+                android:text="Empleados"
+                android:drawableLeft="@drawable/ic_empleados" /> <Button
+            android:id="@+id/btn_catalogo"
+            style="@style/MenuButtonStyle"
+            android:text="Catálogo/Películas"
+            android:drawableLeft="@drawable/ic_peliculas" /> <Button
+            android:id="@+id/btn_clientes"
+            style="@style/MenuButtonStyle"
+            android:text="Clientes"
+            android:drawableLeft="@drawable/ic_clientes" /> <Button
+            android:id="@+id/btn_alquileres"
+            style="@style/MenuButtonStyle"
+            android:text="Alquileres"
+            android:drawableLeft="@drawable/ic_alquileres" /> <Button
+            android:id="@+id/btn_reportes"
+            style="@style/MenuButtonStyle"
+            android:text="Reportes"
+            android:drawableLeft="@drawable/ic_reportes" /> <Button
+            android:id="@+id/btn_sucursales"
+            style="@style/MenuButtonStyle"
+            android:text="Sucursales"
+            android:drawableLeft="@drawable/ic_sucursales" /> <Button
+            android:id="@+id/btn_configuracion"
+            style="@style/MenuButtonStyle"
+            android:text="Configuración"
+            android:drawableLeft="@drawable/ic_configuracion" /> </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/content_area"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/content_background" /> </LinearLayout>

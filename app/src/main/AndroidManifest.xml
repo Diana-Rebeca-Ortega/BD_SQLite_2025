@@ -28,7 +28,7 @@
         <activity android:name=".ActivityConsultas"/>
         <activity android:name=".ActivityBajas"/>
         <activity android:name=".ActivityCambios"/>
-
+        <activity android:name=".ActivityMenuPrincipal" />
     </application>
 
 </manifest>
