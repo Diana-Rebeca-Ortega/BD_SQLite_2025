@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/content_background"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GESTIÓN DE CLIENTES"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/btn_añadir_cliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AÑADIR"
+            android:layout_marginStart="10dp"
+            android:drawableStart="@drawable/ic_persona_add" android:backgroundTint="#FBC02D" /> </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:background="#DCDCDC"
+                android:padding="8dp">
+                <TextView android:text="ID_Cliente" android:textStyle="bold" />
+                <TextView android:text="Nombre" android:textStyle="bold" />
+                <TextView android:text="Primer Ap" android:textStyle="bold" />
+                <TextView android:text="Calle" android:textStyle="bold" />
+                <TextView android:text="Ciudad" android:textStyle="bold" />
+                <TextView android:text="Estado" android:textStyle="bold" />
+                <TextView android:text="No_Sucursal" android:textStyle="bold" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

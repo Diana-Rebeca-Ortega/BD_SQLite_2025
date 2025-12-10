@@ -1,8 +1,10 @@
 <resources>
-    <string name="app_name">BD_SQLite_2025</string>
+    <string name="app_name">DISNEY CLUB</string>
     <string name="txt_btn_altas"> AGREGAR </string>
     <string name="txt_btn_bajas"> ELIMINAR </string>
     <string name="txt_btn_cambios"> MODIFICAR </string>
     <string name="txt_btn_consultas"> BUSCAR </string>
     <string name="txt_titulo_altas">AGREGAR ALUMNOS</string>
+    <string name="navigation_drawer_open">Abrir menú de navegación</string>
+    <string name="navigation_drawer_close">Cerrar menú de navegación</string>
 </resources>

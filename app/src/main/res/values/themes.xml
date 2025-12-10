@@ -1,5 +1,5 @@
 <resources>
-    <style name="Theme.BD_SQLite_2025" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.BD_SQLite_2025" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/menu_background</item>
         <item name="colorSecondary">@color/button_background</item>
     </style>
