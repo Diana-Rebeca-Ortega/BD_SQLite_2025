@@ -1,5 +1,4 @@
-package com.example.bd_sqlite_2025; // Asegúrate de que este paquete sea correcto
-
+package com.example.bd_sqlite_2025;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.drawerlayout.widget.DrawerLayout; // Importa el DrawerLayout
@@ -7,6 +6,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle; // Importa el componente pa
 import androidx.appcompat.widget.Toolbar; // Importa el Toolbar
 import android.os.Bundle;
 import android.widget.Button;
+import com.example.bd_sqlite_2025.ActivityMenuPrincipal;
 
 public class ActivityMenuPrincipal extends AppCompatActivity {
 

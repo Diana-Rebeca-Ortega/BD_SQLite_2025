@@ -1,73 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="horizontal"
+    android:weightSum="2">
 
-    <Button
-        android:id="@+id/btn_consutlas"
-        android:layout_width="157dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="139dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="128dp"
-        android:onClick="abrirActivities"
-        android:text="@string/txt_btn_consultas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_cambios" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#A6A6F5"> <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_altas"
-        android:layout_width="169dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="149dp"
-        android:layout_marginTop="208dp"
-        android:layout_marginEnd="154dp"
-        android:onClick="abrirActivities"
-        android:text="Altas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.262"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/btn_bajas"
-        android:layout_width="160dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="149dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="157dp"
-        android:onClick="abrirActivities"
-        android:text="BAJAS"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_altas" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INICIAR SESIÓN"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="50dp"/>
 
-    <Button
-        android:id="@+id/btn_cambios"
-        android:layout_width="155dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="128dp"
-        android:onClick="abrirActivities"
-        android:text="CAMBIOS"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_bajas" />
+        <EditText
+            android:id="@+id/et_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Usuario"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:layout_marginBottom="20dp"/>
 
-    <Button
-        android:id="@+id/btn_ingresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:onClick="abrirActivities"
-        android:text="INGRESAR"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/et_contrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:layout_marginBottom="40dp"/>
+
+        <Button
+            android:id="@+id/btn_ingresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INGRESAR"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:backgroundTint="#00BFFF"/>
+
+    </LinearLayout>
+</LinearLayout>

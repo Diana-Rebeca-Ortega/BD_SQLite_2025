@@ -23,7 +23,6 @@
         </activity>
 
 <!--Paso 2 hacer una nueva activity - -->
-
         <activity android:name=".ActivityAltas"/>
         <activity android:name=".ActivityBajas"/>
         <activity android:name=".ActivityCambios"/>
