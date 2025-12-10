@@ -7,4 +7,11 @@
     <string name="txt_titulo_altas">AGREGAR ALUMNOS</string>
     <string name="navigation_drawer_open">Abrir menú de navegación</string>
     <string name="navigation_drawer_close">Cerrar menú de navegación</string>
+    <string-array name="categorias_peliculas">
+        <item>Seleccione una opción</item>
+        <item>Fantasía</item>
+        <item>Aventura</item>
+        <item>Comedia</item>
+        <item>Drama</item>
+    </string-array>
 </resources>

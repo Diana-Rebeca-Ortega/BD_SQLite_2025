@@ -25,10 +25,10 @@
 <!--Paso 2 hacer una nueva activity - -->
 
         <activity android:name=".ActivityAltas"/>
-        <activity android:name=".ActivityConsultas"/>
         <activity android:name=".ActivityBajas"/>
         <activity android:name=".ActivityCambios"/>
         <activity android:name=".ActivityMenuPrincipal" />
+        <activity android:name=".ABCC_Peliculas.ActivityConsultasPeliculas"/>
     </application>
 
 </manifest>

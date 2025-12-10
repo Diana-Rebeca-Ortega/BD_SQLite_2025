@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTRAR NUEVA PELICULA"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datos Generales"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Título" />
+        <EditText
+            android:id="@+id/et_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_marginBottom="15dp"
+            android:minHeight="48dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Categoría" />
+        <Spinner
+            android:id="@+id/spinner_categoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/categorias_peliculas" android:minHeight="48dp"
+            android:layout_marginBottom="15dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Director" />
+        <EditText
+            android:id="@+id/et_director"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_marginBottom="30dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finanzas"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Alquiler (Diario)" />
+        <EditText
+            android:id="@+id/et_alquiler"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="15dp"
+            android:minHeight="48dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Precio para venta al público" />
+        <EditText
+            android:id="@+id/et_precio_venta"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="15dp"
+            android:minHeight="48dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Stock Total" />
+        <EditText
+            android:id="@+id/et_stock_total"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_marginBottom="40dp"
+            android:minHeight="48dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btn_cancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CANCELAR"
+                android:backgroundTint="#EF5350"
+                android:layout_marginEnd="10dp" />
+
+            <Button
+                android:id="@+id/btn_guardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GUARDAR"
+                android:backgroundTint="#66BB6A" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

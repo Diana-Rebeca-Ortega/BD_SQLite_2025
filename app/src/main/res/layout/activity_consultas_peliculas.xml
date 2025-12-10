@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONSULTA Y EDICIÓN DE PELÍCULAS"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/et_buscar_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Buscar película por título..."
+        android:imeOptions="actionSearch"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#DDDDDD"
+        android:padding="4dp" >
+        <TextView android:layout_width="20dp" android:layout_height="wrap_content" android:textStyle="bold" android:text="ID" />
+        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:textStyle="bold" android:text="Título" />
+        <TextView android:layout_width="50dp" android:layout_height="wrap_content" android:textStyle="bold" android:text="Cat." />
+        <TextView android:layout_width="50dp" android:layout_height="wrap_content" android:textStyle="bold" android:text="Alq." />
+        <TextView android:layout_width="50dp" android:layout_height="wrap_content" android:textStyle="bold" android:text="Venta" />
+        <TextView android:layout_width="40dp" android:layout_height="wrap_content" android:textStyle="bold" android:text="Stock" />
+        <TextView android:layout_width="65dp" android:layout_height="wrap_content" android:textStyle="bold" android:text="Acción" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_consulta_peliculas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+</LinearLayout>
