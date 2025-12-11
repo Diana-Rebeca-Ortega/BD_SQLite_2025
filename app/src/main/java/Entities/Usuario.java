@@ -4,10 +4,9 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-// Mapea a la tabla USUARIO de tu base de datos
 @Entity(tableName = "usuario")
 public class Usuario {
-
+    public Usuario() {}
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "ID_USUARIO")
     private int idUsuario;
@@ -18,7 +17,7 @@ public class Usuario {
     @ColumnInfo(name = "TIPO_USUARIO")
     private String tipoUsuario;
 
-    @ColumnInfo(name = "CONTRASENA_HASH") // El campo de la contraseña en tu tabla
+    @ColumnInfo(name = "CONTRASENA_HASH")
     private String contrasenaHash;
 
     // Constructor (necesario para Room)

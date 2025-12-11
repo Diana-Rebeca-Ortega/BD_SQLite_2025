@@ -15,8 +15,11 @@ import Controllers.UsuarioDao;
 import Entities.Pelicula;
 import Entities.CopiaPelicula;
 import Entities.Usuario; // <--- NUEVO IMPORT
+import android.os.AsyncTask;
 
-// 1. Añadimos Usuario.class a la lista de Entities
+import androidx.annotation.NonNull;
+import androidx.sqlite.db.SupportSQLiteDatabase;
+
 @Database(entities = {Pelicula.class, CopiaPelicula.class, Usuario.class}, version = 2)
 public abstract class videosBDD extends RoomDatabase {
 
@@ -38,11 +41,34 @@ public abstract class videosBDD extends RoomDatabase {
                             "BD_Videos"
                     )
                     .fallbackToDestructiveMigration()
+                    .addCallback(roomCallback)
                     .build();
         }
 
         return INSTANCE;
     }
+    private static RoomDatabase.Callback roomCallback = new RoomDatabase.Callback() {
+        @Override
+        public void onCreate(@NonNull SupportSQLiteDatabase db) {
+            super.onCreate(db);
+            // Ejecutar la inserción en segundo plano
+            new PopulateDbAsyncTask(INSTANCE).execute();
+        }
+    };
+    private static class PopulateDbAsyncTask extends AsyncTask<Void, Void, Void> {
+        private final UsuarioDao usuarioDao;
 
+        PopulateDbAsyncTask(videosBDD db) {
+            usuarioDao = db.usuarioDao();
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            // Inserta el usuario de prueba (nombreUsuario, tipoUsuario, contrasenaHash)
+            Usuario usuarioAdmin = new Usuario("diana", "ADMIN", "diana123");
+            usuarioDao.insertarUsuario(usuarioAdmin);
+            return null;
+        }
+    }
     public static void destroyInstance(){INSTANCE = null;}
 }
